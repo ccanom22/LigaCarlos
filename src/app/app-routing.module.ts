@@ -11,6 +11,15 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'clasificacion',
+    loadChildren: () => import('./clasificacion/clasificacion.module').then( m => m.ClasificacionPageModule)
+  },
+  {
+    path: 'jornada',
+    loadChildren: () => import('./jornada/jornada.module').then( m => m.JornadaPageModule)
+  },
+ 
 ];
 
 @NgModule({
